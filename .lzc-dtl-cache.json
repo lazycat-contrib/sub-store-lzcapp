@@ -1,0 +1,35 @@
+{
+  "name": "Sub-Store",
+  "package": "coder.czyt.app.sub-store",
+  "description": "Advanced Subscription Manager",
+  "homepage": "https://github.com/sub-store-org/Sub-Store",
+  "author": "sub-store-org",
+  "app_features": [
+    "background_task"
+  ],
+  "subdomain": "sub-store",
+  "version": "2.16.61",
+  "iconPath": "icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [
+    "ios",
+    "android"
+  ],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "sub-store_127.0.0.1_3001": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_xream_sub-store": {
+    "originalImage": "xream/sub-store",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/czyt/xream/sub-store:d75522a7bca8f4ce",
+    "timestamp": "2025-02-28T12:50:26.476Z"
+  },
+  "sub-store_volume_/opt/app/data_action": "emptyDir",
+  "sub-store_volume_/opt/app/data_location": "app_data"
+}
