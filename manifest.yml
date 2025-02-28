@@ -14,6 +14,8 @@ application:
   usb_accel: false
   routes:
     - /=http://sub-store.coder.czyt.app.sub-store.lzcapp:3001/
+  public_path:
+    - /
 services:
   sub-store:
     image: registry.lazycat.cloud/czyt/xream/sub-store:d75522a7bca8f4ce
