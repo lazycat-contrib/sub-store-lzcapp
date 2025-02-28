@@ -1,5 +1,5 @@
 lzc-sdk-version: "0.1"
-name: Sub-Store
+name: Sub Store
 package: coder.czyt.app.sub-store
 version: 2.16.61
 description: Advanced Subscription Manager
