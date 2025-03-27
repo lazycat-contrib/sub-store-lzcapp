@@ -1,7 +1,7 @@
 lzc-sdk-version: "0.1"
 name: Sub Store
 package: coder.czyt.app.sub-store
-version: 2.19.4
+version: 2.19.9
 description: Advanced Subscription Manager
 homepage: https://github.com/sub-store-org/Sub-Store
 author: sub-store-org
@@ -18,7 +18,7 @@ application:
     - /
 services:
   sub-store:
-    image: docker.hlmirror.com/xream/sub-store:2.19.4
+    image: docker.hlmirror.com/xream/sub-store:2.19.9
     environment:
       - SUB_STORE_PUSH_SERVICE=
       - SUB_STORE_BACKEND_SYNC_CRON=55 23 * * *
