@@ -1,0 +1,40 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/sub-store.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: sub-store
+
+build:
+  run_buildscript: false
+
+images:
+  - id: sub-store
+    target: service
+    service: sub-store
+    source: docker.io/xream/sub-store
+    channel: stable
+    sort: semver
+    tag_regex: '^\d+\.\d+\.\d+$'
+    version_regex: '^(?P<version>\d+\.\d+\.\d+)$'
+    delivery:
+      mode: mirror
+      image_template: docker.1ms.run/xream/sub-store:{tag}
+
+stores:
+  official:
+    enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Sub Store
+    summary: Sub Store 的 LazyCat 自动构建版本

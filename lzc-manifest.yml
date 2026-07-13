@@ -1,10 +1,3 @@
-lzc-sdk-version: "0.1"
-name: Sub Store
-package: coder.czyt.app.sub-store
-version: 2.19.29
-description: Advanced Subscription Manager
-homepage: https://github.com/sub-store-org/Sub-Store
-author: sub-store-org
 application:
   subdomain: sub-store
   background_task: true
@@ -12,13 +5,15 @@ application:
   gpu_accel: false
   kvm_accel: false
   usb_accel: false
-  routes:
-    - /=http://sub-store:3001/
+  upstreams:
+    - location: /
+      backend: http://sub-store:3001/
   public_path:
     - /
 services:
   sub-store:
-    image: docker.hlmirror.com/xream/sub-store:2.19.29
+    # upstream: docker.io/xream/sub-store:2.36.5
+    image: docker.1ms.run/xream/sub-store:2.36.5
     environment:
       - SUB_STORE_PUSH_SERVICE=
       - SUB_STORE_BACKEND_SYNC_CRON=55 23 * * *
