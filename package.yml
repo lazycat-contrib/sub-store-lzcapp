@@ -1,6 +1,6 @@
 name: Sub Store
 package: community.app.sub-store
-version: 2.36.14
+version: 2.36.17
 min_os_version: 1.5.0
 description: "Advanced subscription manager"
 license: AGPL-3.0
