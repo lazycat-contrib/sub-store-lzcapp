@@ -12,8 +12,8 @@ application:
     - /
 services:
   sub-store:
-    # upstream: docker.io/xream/sub-store:2.36.20
-    image: docker.1ms.run/xream/sub-store:2.36.20
+    # upstream: docker.io/xream/sub-store:2.36.21
+    image: docker.1ms.run/xream/sub-store:2.36.21
     environment:
       - SUB_STORE_PUSH_SERVICE=
       - SUB_STORE_BACKEND_SYNC_CRON=55 23 * * *
